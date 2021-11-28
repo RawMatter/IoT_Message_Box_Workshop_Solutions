@@ -1,7 +1,8 @@
 # About US
-<img src="resources\Raw_Matter_logo.png" width='200em'>
 
 This sample code was prepared by [Andy](http://andy.rawmatter.io) from [Raw Matter](http://rawmatter.io) as part of an introductory workshop for creating *Things* that connect to the AWS IoT Core. 
+
+<img src="resources\Raw_Matter_logo.png" width='200em' style="text-align:centre;">
 
 As nerds for hire, Raw Matter develop robotics, electronics & software for commercial applications. We would welcome the chance to discuss your needs with you. We are also the organising sponsors for the [Perth electronics group](https://www.facebook.com/groups/perthelectronics) and recommend reaching out to that community for help with personal projects.
 
