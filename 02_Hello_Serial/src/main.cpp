@@ -41,11 +41,11 @@ void loop() {
   // read the digital input BUTTON_0
   if(digitalRead(BUTTON_0) == false){
     // What is with the inverted logic?
-    // Because we have PULLUP resistors enable and the buttons are a type called 'Normally Open'
-    // This means when the button is not pressed the weak pull up resistor supplys 3.3v to the input, a logic 1
+    // Because we have PULLUP resistors enable and the buttons are a type called 'Normally Open'.
+    // This means when the button is not pressed the weak pull up resistor supplys 3.3v to the input, a logic 1.
     // When we press the button, it connects the pin directly to ground/0v and we get a logic 0
     // So the logic in our code is reversed, this is not uncommon for microcontrollers. It is often easier to design
-    //   a circuit layout the connects buttons to ground instead of 3.3v when pressed thanks to 'ground planes'
+    //   a circuit layout that connects buttons to ground instead of 3.3v when pressed thanks to 'ground planes'
 
     Serial.println("Button 0 is pressed");
   }
