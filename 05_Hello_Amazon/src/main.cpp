@@ -103,9 +103,11 @@ void publish(int count, String action ){
 
   client.publish("counter", jsonBuffer);
 
+  // We could add more granularity and filtering options to our topics by including the action
   // String topic = "counter/" + action;
   // Serial.println(topic);
   // client.publish(topic, jsonBuffer);
+  
 }
 
 void loop() {
@@ -114,16 +116,15 @@ void loop() {
   if(digitalRead(BUTTON_0) == false){
     Serial.println("Button 0 is pressed");
     counter++;
-    publish(counter, "Increment");
+    publish(counter, "increment");
   }
 
   if (digitalRead(BUTTON_1) == false){
       Serial.println("Button 1 is pressed");
       counter--;
-      publish(counter, "Decrement");
+      publish(counter, "decrement");
 
   }
-
 
   Serial.print("counter value: ");
   Serial.println(counter);
