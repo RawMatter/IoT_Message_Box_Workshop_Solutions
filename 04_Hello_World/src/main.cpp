@@ -2,7 +2,10 @@
 #include <TFT_eSPI.h>
 // Add the WiFi library and our secrets definition
 #include <WiFi.h>
+// WiFi Parameters are define in the "secrets" header file
 #include "secrets.h"
+
+
 // Button definitions
 const char BUTTON_0 = 0;
 const char BUTTON_1 = 35;
@@ -11,7 +14,6 @@ const char BUTTON_1 = 35;
 TFT_eSPI tft = TFT_eSPI();
 char buff[512];
 
-// WiFi Parameters are define in the secrets header file
 
 void setup() {
   Serial.begin(115200);
@@ -33,7 +35,7 @@ void setup() {
   Serial.println("Connecting to WiFi");
 
   // Initialise the WiFi library with network parameters  
-  WiFi.begin(ssid, password);
+  WiFi.begin(SSID, PASSWORD);
   while (WiFi.status() != WL_CONNECTED){
     delay(200);
     Serial.print(".");
@@ -53,8 +55,7 @@ void setup() {
 
 void loop() {
   // Simple multi line string formatting
-  Serial.print("loop ");
-  Serial.println(counter);
+  Serial.println("loop ");
   
   tft.fillScreen(TFT_BLUE);
   tft.setCursor(5, 0, 2);
@@ -67,6 +68,26 @@ void loop() {
   tft.println("MAC: ");
   tft.print(WiFi.macAddress());
 
+  // if(digitalRead(BUTTON_0) == false){
+  //   Serial.println("Button 0 is pressed");
+  //   counter++;
+  // }
+
+  // // read the digital input BUTTON_1
+  // if (digitalRead(BUTTON_1) == false){
+  //     Serial.println("Button 1 is pressed");
+  //     counter--;
+  // }
+  // Serial.print("counter value: ");
+  // Serial.println(counter);
+
+  // tft.fillScreen(TFT_DARKGREEN);
+
+  // tft.setCursor(20,50,1);
+
+  // tft.setTextSize(4);
+
+  // tft.println(counter);
 
   sleep(1);
 }

@@ -3,5 +3,5 @@
 // the file secrets.h is included in the gitignore file
 // helping to avoid sharing secret information in a publicly accessible repository
 
-const char* ssid = "honeypot";
-const char* password = "Nice try Zero Cool";
+const char* SSID = "honeypot";
+const char* PASSWORD = "Nice try Zero Cool";
